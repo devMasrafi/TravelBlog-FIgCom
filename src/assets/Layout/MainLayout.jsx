@@ -7,7 +7,7 @@ const MainLayout = () => {
   return (
     <div className="flex h-screen">
 
-      <aside className="w-[27%] bg-blue-200 fixed h-full z-10">
+      <aside className="w-[27%] fixed h-full z-10 shadow-lg">
         <Navbar />
         <Sidebody />
       </aside>
