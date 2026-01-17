@@ -7,13 +7,13 @@ const MainLayout = () => {
   return (
     <div className="flex h-screen">
 
-      <aside className="w-[30%] bg-blue-200 fixed h-full z-10">
+      <aside className="w-[27%] bg-blue-200 fixed h-full z-10">
         <Navbar />
         <Sidebody />
       </aside>
       
       {/* Main Content - Right Section */}
-      <main className="w-[70%] ml-[30%] ">
+      <main className="w-[73%] ml-[27%] ">
         <Outlet />
       </main>
     </div>
