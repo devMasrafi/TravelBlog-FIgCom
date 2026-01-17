@@ -5,7 +5,7 @@ const Home = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Placeholder: Implement search logic here (e.g., navigate to search results page)
+    // search logic here or backend call
     alert(`Searching for: ${searchQuery}`);
   };
 
