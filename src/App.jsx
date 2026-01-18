@@ -6,6 +6,7 @@ import About from "./assets/Pages/About";
 import MainLayout from "./assets/Layout/MainLayout";
 import { ThemeProvider } from "./assets/codeSnipets/ThemeContext";
 import ScrolltoTop from "./assets/codeSnipets/ScrolltoTop";
+import Contact from "./assets/Pages/Contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/article" element={<Article />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
