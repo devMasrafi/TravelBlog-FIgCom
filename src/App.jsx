@@ -4,18 +4,23 @@ import Home from "./assets/Pages/Home";
 import Article from "./assets/Pages/Article";
 import About from "./assets/Pages/About";
 import MainLayout from "./assets/Layout/MainLayout";
+import { ThemeProvider } from "./assets/codeSnipets/ThemeContext";
+import ScrolltoTop from "./assets/codeSnipets/ScrolltoTop";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/article" element={<Article />} />
-          <Route path="/about" element={<About />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrolltoTop />
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/article" element={<Article />} />
+            <Route path="/about" element={<About />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

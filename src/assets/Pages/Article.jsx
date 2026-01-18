@@ -49,45 +49,40 @@ const Article = () => {
       name: "Sarah K.",
       location: "Bali",
       rating: 5,
-      quote:
-        "Bali was magical! The beaches were pristine, and our guide helped us discover hidden gems. I'll never forget the sunrise yoga session.",
-      image: "https://picsum.photos/100/100?random=1", // Updated: Reliable placeholder
+      quote: 'Bali was magical! The beaches were pristine, and our guide helped us discover hidden gems. I\'ll never forget the sunrise yoga session.',
+      image: 'https://picsum.photos/100/100?random=1',
     },
     {
-      name: "Mike T.",
-      location: "Swiss Alps",
+      name: 'Mike T.',
+      location: 'Swiss Alps',
       rating: 5,
-      quote:
-        "Hiking the Alps was life-changing. The views were epic, and the local cheese was to die for. Highly recommend for nature lovers!",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      quote: 'Hiking the Alps was life-changing. The views were epic, and the local cheese was to die for. Highly recommend for nature lovers!',
+      image: 'https://picsum.photos/100/100?random=2',
     },
     {
-      name: "Aiko L.",
-      location: "Tokyo",
+      name: 'Aiko L.',
+      location: 'Tokyo',
       rating: 4,
-      quote:
-        "Tokyo's energy is unmatched. From Akihabara to Tsukiji Market, every day was an adventure. Just wish I had more time!",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      quote: 'Tokyo\'s energy is unmatched. From Akihabara to Tsukiji Market, every day was an adventure. Just wish I had more time!',
+      image: 'https://picsum.photos/100/100?random=3',
     },
   ];
 
   const handleShare = () => {
-    // Placeholder: Implement share functionality (e.g., copy URL or open social media)
+    // Placeholder: Implement share functionality
     navigator.clipboard.writeText(window.location.href);
-    alert("Article link copied to clipboard!");
+    alert('Article link copied to clipboard!');
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Header */}
-      <header className="bg-white shadow-lg">
+      <header className="bg-white dark:bg-gray-800 shadow-lg">
         <div className="max-w-4xl mx-auto px-6 py-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
             Top Travel Destinations: Adventures Await
           </h1>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
             By TravelBlog Team | Published on January 17, 2026
           </p>
           <img
@@ -100,75 +95,52 @@ const Article = () => {
 
       {/* Introduction */}
       <section className="max-w-4xl mx-auto px-6 py-12">
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          Traveling opens doors to new cultures, breathtaking landscapes, and
-          unforgettable memories. In this article, we explore three must-visit
-          destinations—Bali, the Swiss Alps, and Tokyo—based on feedback from
-          our community of travelers. Discover what makes these places special
-          and hear directly from users who've experienced them firsthand.
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+          Traveling opens doors to new cultures, breathtaking landscapes, and unforgettable memories. In this article, we explore three must-visit destinations—Bali, the Swiss Alps, and Tokyo—based on feedback from our community of travelers. Discover what makes these places special and hear directly from users who've experienced them firsthand.
         </p>
       </section>
 
       {/* Destinations */}
       <section className="max-w-4xl mx-auto px-6 py-12">
-        <h2 className="text-2xl font-bold text-gray-800 mb-8">
-          Explore the Destinations
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-8">Explore the Destinations</h2>
         {destinations.map((dest) => (
-          <div
-            key={dest.id}
-            className="mb-12 bg-white rounded-lg shadow-lg overflow-hidden"
-          >
-            <img
-              src={dest.image}
-              alt={dest.name}
-              className="w-full h-48 md:h-64 object-cover"
-            />
+          <div key={dest.id} className="mb-12 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <img src={dest.image} alt={dest.name} className="w-full h-48 md:h-64 object-cover" />
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-4">{dest.name}</h3>
-              <p className="text-gray-700 mb-4">{dest.description}</p>
-              <h4 className="font-semibold mb-2">Highlights:</h4>
-              <ul className="list-disc list-inside text-gray-600 mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">{dest.name}</h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">{dest.description}</p>
+              <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Highlights:</h4>
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-4">
                 {dest.highlights.map((highlight, index) => (
                   <li key={index}>{highlight}</li>
                 ))}
               </ul>
-              <p className="text-gray-600 italic">Tip: {dest.tips}</p>
+              <p className="text-gray-600 dark:text-gray-300 italic">Tip: {dest.tips}</p>
             </div>
           </div>
         ))}
       </section>
 
       {/* User Experiences */}
-      <section className="bg-gray-100 py-12 px-6">
+      <section className="bg-gray-100 dark:bg-gray-800 py-12 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-            Real Traveler Experiences
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center">Real Traveler Experiences</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {userExperiences.map((exp, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+              <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
                 <div className="flex items-center mb-4">
-                  <img
-                    src={exp.image}
-                    alt={exp.name}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
+                  <img src={exp.image} alt={exp.name} className="w-12 h-12 rounded-full mr-4" />
                   <div>
-                    <h4 className="font-semibold">{exp.name}</h4>
-                    <p className="text-sm text-gray-600">
-                      Visited {exp.location}
-                    </p>
+                    <h4 className="font-semibold text-gray-800 dark:text-white">{exp.name}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">Visited {exp.location}</p>
                   </div>
                 </div>
                 <div className="flex items-center mb-4">
                   {[...Array(exp.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-500">
-                      ⭐
-                    </span>
+                    <span key={i} className="text-yellow-500 dark:text-yellow-400">⭐</span>
                   ))}
                 </div>
-                <p className="text-gray-700 italic">"{exp.quote}"</p>
+                <p className="text-gray-700 dark:text-gray-300 italic">"{exp.quote}"</p>
               </div>
             ))}
           </div>
@@ -176,23 +148,21 @@ const Article = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="max-w-4xl mx-auto px-6 py-12 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Ready to Plan Your Trip?
-        </h2>
-        <p className="text-gray-600 mb-8">
+      <section className="max-w-4xl mx-auto px-6 py-12 text-center bg-gray-50 dark:bg-gray-900">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Ready to Plan Your Trip?</h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-8">
           Get personalized recommendations and book your adventure today.
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a
             href="/home"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="bg-blue-600 dark:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-800 transition"
           >
             Explore More Destinations
           </a>
           <button
             onClick={handleShare}
-            className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition"
+            className="bg-gray-600 dark:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 dark:hover:bg-gray-800 transition"
           >
             Share This Article
           </button>
@@ -200,11 +170,9 @@ const Article = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 px-6">
+      <footer className="bg-gray-800 dark:bg-gray-900 text-white py-8 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-400">
-            &copy; 2026 TravelBlog. All rights reserved.
-          </p>
+          <p className="text-gray-400 dark:text-gray-500">&copy; 2026 TravelBlog. All rights reserved.</p>
         </div>
       </footer>
     </div>
